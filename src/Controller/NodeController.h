@@ -8,10 +8,12 @@
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
 
-class NodeController {
+class NodeController
+{
 public:
 	NodeController();
 	virtual ~NodeController();
+	void start();
 };
 
 #endif /* CONTROLLER_NODECONTROLLER_H_ */

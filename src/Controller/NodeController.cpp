@@ -15,4 +15,8 @@ NodeController::NodeController() {
 NodeController::~NodeController() {
 	// TODO Auto-generated destructor stub
 }
+void NodeController :: start()
+{
+
+}
 
