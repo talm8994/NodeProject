@@ -8,16 +8,24 @@
 #include "NodeController.h"
 
 
-NodeController::NodeController() {
-	// TODO Auto-generated constructor stub
+NodeController::NodeController()
+{
+	stringNode.setValue("adsdasd");
+	intNode.setValue(999);
 
+	stringArrayNode.setValue("words ");
+	otherArrayNode.setValue("linked Node");
+	stringArrayNode.setNext(&otherArrayNode);
 }
 
-NodeController::~NodeController() {
-	// TODO Auto-generated destructor stub
+NodeController::~NodeController()
+{
+
 }
 void NodeController :: start()
 {
-
+	cout << "the contents of the stringNode are" << stringNode.getValue() << endl;
+	cout << "the contents of the string array node are: " << stringArrayNode.getValue()<< endl;
+	cout << "this connected to strings ArrayNode" << (*stringArrayNode.getNext()).getValue() << endl;
 }
 

@@ -8,7 +8,9 @@
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
 #include "../Model/Node.h"
-
+#include "../Model/Node.ccp"
+#include "../Model/ArrayNode.h"
+#include "../Model/ArrayNode.ccp"
 
 #include <string>
 
@@ -17,6 +19,10 @@ class NodeController
 {
 private:
 	Node<string> stringNode;
+	Node<int> intNode;
+	ArrayNode<string> stringArrayNode;
+	ArrayNode<string> otherArrayNode;
+
 public:
 	NodeController();
 	virtual ~NodeController();
