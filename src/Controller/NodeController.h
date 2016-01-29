@@ -7,9 +7,16 @@
 
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
+#include "../Model/Node.h"
 
+
+#include <string>
+
+using namespace std;
 class NodeController
 {
+private:
+	Node<string> stringNode;
 public:
 	NodeController();
 	virtual ~NodeController();
