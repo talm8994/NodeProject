@@ -28,34 +28,54 @@ int CTECArray<Type>::getSize()
 }
 
 template<class Type>
-void CTECArray<Type>::set(int position, Type value)
+Type* CTECArray<Type>::get(int position)
 {
 	if(position >= size || position < 0)
-	{
-// im outtie fix me daddy
-		cerr << "position value is outtie :(" << endl;
-		return nullptr;
-	}
-	else
-	{
-		// im in
-		ArrayNode<Type> * current = head;
-		for(int spot = 0; spot <= position; spot++)
 		{
-			if(spot != position)
+	// im outtie fix me daddy
+			cerr << "position value is outtie :(" << endl;
+			return nullptr;
+		}
+		else
+		{
+			// im in
+			ArrayNode<Type> * current = head;
+			for(int spot = 0; spot <= position; spot++)
 			{
-				current = current->getNext();
-			}
-			else
-			{
-				return current->getValue();
+				if(spot != position)
+				{
+					current = current->getNext();
+				}
+				else
+				{
+					return current->getValue();
+				}
 			}
 		}
 	}
-}
 
 template<class Type>
-Type* CTECArray<Type>::get(int position)
+void CTECArray<Type>::set(int position, Type value)
 {
+	if(position >= size || position < 0)
+			{
+		// im outtie fix me daddy
+				cerr << "position value is outtie :(" << endl;
+			}
+			else
+			{
+				ArrayNode<Type> * current = head;
+				for(int spot = 0; spot < position; spot++)
+				{
+					if(spot != position)
+					{
+										current = current->getNext();
+					}
+					else
+					{
+						current->setValue(value);
+					}
+				}
 
+			}
 }
