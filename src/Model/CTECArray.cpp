@@ -7,6 +7,7 @@
 
 #include "CTECArray.h"
 using namespace std;
+#include <iostream>
 
 template <class Type>
 CTECArray<Type>::CTECArray(int size)
@@ -20,6 +21,21 @@ CTECArray<Type>::CTECArray(int size)
 	{
 		cerr << "you ding bat" << endl;
 		return;
+	}
+	for(int index= 0; index < size; index++)
+	{
+	if(head != nullptr)
+		{
+			ArrayNode<Type> nextNode;
+			nextNode.setNext(head);
+			this->head = &nextNode;
+		}
+	else
+		{
+			//The firstArrayNode needs to be made
+			ArrayNode<Type> firstNode;
+			this->head = &firstNode;
+		}
 	}
 }
 

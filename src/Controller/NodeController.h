@@ -8,9 +8,9 @@
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
 #include "../Model/Node.h"
-#include "../Model/Node.ccp"
+#include "../Model/Node.cpp"
 #include "../Model/ArrayNode.h"
-#include "../Model/ArrayNode.ccp"
+#include "../Model/ArrayNode.cpp"
 
 #include <string>
 
