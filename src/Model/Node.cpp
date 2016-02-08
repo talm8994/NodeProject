@@ -6,7 +6,9 @@
  */
 #include <iostream>
 #include "Node.h"
-
+/*
+ * this stuff greats the arrays to a point
+ */
 
 template <class Type>
 Node<Type>::Node()

@@ -16,14 +16,14 @@ this->next = nullptr;
 }
 
 template <class Type>
-ArrayNode<Type> :: ArrayNode(Type value) : Node<Type>(value)
+ArrayNode<Type> :: ArrayNode(const Type& value) : Node<Type>(value)
 {
 	this->next = nullptr;
 	this->value = nullptr;
 }
 
 template <class Type>
-ArrayNode<Type> :: ArrayNode(Type value, ArrayNode<Type> * next) : Node<Type>(value)
+ArrayNode<Type> :: ArrayNode(const Type& value, ArrayNode<Type> * next) : Node<Type>(value)
 {
 	this->value = nullptr;
 	this->next = nullptr;

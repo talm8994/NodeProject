@@ -8,7 +8,9 @@
 #include "CTECArray.h"
 using namespace std;
 #include <iostream>
-
+/*
+ * it makes it so when you put a negitive number or 0 it wont let you and make you put it in again
+ */
 template <class Type>
 CTECArray<Type>::CTECArray(int size)
 {
@@ -38,7 +40,9 @@ CTECArray<Type>::CTECArray(int size)
 		}
 	}
 }
-
+/*
+ * this makes it so that it delets the next thing on the list an moves on
+ */
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
@@ -59,7 +63,9 @@ CTECArray<Type>::~CTECArray()
 		}
 	}
 }
-
+/*
+ * this makes sure that you have the right size of array so that it wont go on forever
+ */
 template<class Type>
 int CTECArray<Type>::getSize()
 {
@@ -92,14 +98,16 @@ Type* CTECArray<Type>::get(int position)
 			}
 		}
 	}
-
+/*
+ * this fixes it so that it goes back to where it belongs
+ */
 template<class Type>
 void CTECArray<Type>::set(int position, Type value)
 {
 	if(position >= size || position < 0)
 			{
 		// im outtie fix me daddy
-				cerr << "position value is outtie :(" << endl;
+				cerr << "Im in, snake!!" << endl;
 			}
 			else
 			{
@@ -108,7 +116,7 @@ void CTECArray<Type>::set(int position, Type value)
 				{
 					if(spot != position)
 					{
-										current = current->getNext();
+					    current = current->getNext();
 					}
 					else
 					{

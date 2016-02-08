@@ -5,7 +5,9 @@
  *      Author: talm8994
  */
 #include "NodeController.h"
-
+/*
+ * this makes is it can run
+ */
 int main()
 {
 	NodeController * baseController = new NodeController();

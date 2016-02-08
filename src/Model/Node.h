@@ -7,7 +7,9 @@
 
 #ifndef MODEL_NODE_H_
 #define MODEL_NODE_H_
-
+/*
+ * this creats the template so that you can put in in a differnt class
+ */
 template <class Type>
 class Node
 {
@@ -16,10 +18,10 @@ private:
 	Node * pointers;
 public:
 	Node();
-	Node(Type value);
+	Node(const Type& value);
 	virtual ~Node();
 	Type getValue();
-	void setValue(Type value);
+	void setValue(const Type& value);
 	Node * getPointers();
 };
 
