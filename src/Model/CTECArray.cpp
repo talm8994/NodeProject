@@ -73,15 +73,9 @@ int CTECArray<Type>::getSize()
 }
 
 template<class Type>
-Type* CTECArray<Type>::get(int position)
+Type CTECArray<Type>::get(int position)
 {
-	if(position >= size || position < 0)
-		{
-	// im outtie fix me daddy
-			cerr << "position value is outtie :(" << endl;
-			return nullptr;
-		}
-		else
+	assert(position < size && position >= 0);
 		{
 			// im in
 			ArrayNode<Type> * current = head;
@@ -102,14 +96,9 @@ Type* CTECArray<Type>::get(int position)
  * this fixes it so that it goes back to where it belongs
  */
 template<class Type>
-void CTECArray<Type>::set(int position, Type value)
+void CTECArray<Type>::set(int position, Type& value)
 {
-	if(position >= size || position < 0)
-			{
-		// im outtie fix me daddy
-				cerr << "Im in, snake!!" << endl;
-			}
-			else
+	assert(position < size && position >= 0);
 			{
 				ArrayNode<Type> * current = head;
 				for(int spot = 0; spot < position; spot++)
