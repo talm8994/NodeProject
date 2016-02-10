@@ -13,7 +13,7 @@ NodeController::NodeController()
 	stringNode.setValue("adsdasd");
 	intNode.setValue(999);
 
-	stringArrayNode.setValue("words ");
+	stringArrayNode.setValue("words");
 	otherArrayNode.setValue("linked Node");
 	stringArrayNode.setNext(&otherArrayNode);
 }
