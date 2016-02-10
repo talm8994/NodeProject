@@ -7,6 +7,9 @@
 
 #include "CTECArray.h"
 using namespace std;
+
+#include <assert,h>
+
 #include <iostream>
 /*
  * it makes it so when you put a negitive number or 0 it wont let you and make you put it in again
@@ -19,11 +22,8 @@ CTECArray<Type>::CTECArray(int size)
 
 
 	//defence
-	if(size <= 0)
-	{
-		cerr << "you ding bat" << endl;
-		return;
-	}
+	assert(size > 0);
+
 	for(int index= 0; index < size; index++)
 	{
 	if(head != nullptr)
