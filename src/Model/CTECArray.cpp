@@ -8,7 +8,7 @@
 #include "CTECArray.h"
 using namespace std;
 
-#include <assert,h>
+#include <assert.h>
 
 #include <iostream>
 /*
@@ -28,15 +28,15 @@ CTECArray<Type>::CTECArray(int size)
 	{
 	if(head != nullptr)
 		{
-			ArrayNode<Type> nextNode;
-			nextNode.setNext(head);
-			this->head = &nextNode;
+			ArrayNode<Type> * nextNode = new ArrayNode<Type>();
+			nextNode->setNext(head);
+			this->head = nextNode;
 		}
 	else
 		{
 			//The firstArrayNode needs to be made
-			ArrayNode<Type> firstNode;
-			this->head = &firstNode;
+			ArrayNode<Type> * firstNode = new ArrayNode <Type>();
+			this->head = firstNode;
 		}
 	}
 }
@@ -96,12 +96,12 @@ Type CTECArray<Type>::get(int position)
  * this fixes it so that it goes back to where it belongs
  */
 template<class Type>
-void CTECArray<Type>::set(int position, Type& value)
+void CTECArray<Type>::set(int position, const Type& value)
 {
 	assert(position < size && position >= 0);
 			{
 				ArrayNode<Type> * current = head;
-				for(int spot = 0; spot < position; spot++)
+				for(int spot = 0; spot <= position; spot++)
 				{
 					if(spot != position)
 					{

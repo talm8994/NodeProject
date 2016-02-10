@@ -10,12 +10,7 @@
 
 NodeController::NodeController()
 {
-	stringNode.setValue("adsdasd");
-	intNode.setValue(999);
-
-	stringArrayNode.setValue("words");
-	otherArrayNode.setValue("linked Node");
-	stringArrayNode.setNext(&otherArrayNode);
+	notHipsterInts = new CTECArray<int>(5);
 }
 
 NodeController::~NodeController()
@@ -24,8 +19,14 @@ NodeController::~NodeController()
 }
 void NodeController :: start()
 {
-	cout << "the contents of the stringNode are" << stringNode.getValue() << endl;
-	cout << "the contents of the string array node are: " << stringArrayNode.getValue()<< endl;
-	cout << "this connected to strings ArrayNode" << (*stringArrayNode.getNext()).getValue() << endl;
+	for(int index = 0; index < notHipsterInts->getSize(); index++)
+	{
+		notHipsterInts->set(index, (index + 1));
+	}
+
+	for(int index = notHipsterInts->getSize() -1; index >= 0; index--)
+	{
+		cout << "the stuff  notHipsterInts array node " << index << " are: " << notHipsterInts->get(index) << endl;
+	}
 }
 
