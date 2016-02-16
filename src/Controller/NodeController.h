@@ -12,6 +12,7 @@
 #include "../Model/ArrayNode.h"
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.cpp"
+#include "../Model/Timer.h"
 
 #include <string>
 /*
@@ -22,6 +23,7 @@ class NodeController
 {
 private:
 	CTECArray<int> * notHipsterInts;
+	Timer arrayTimer;
 
 public:
 	NodeController();
