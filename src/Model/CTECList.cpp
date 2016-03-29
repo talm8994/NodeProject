@@ -46,4 +46,35 @@ void CTECList<Type> :: calculateSize()
 		size = count;
 	}
 }
+template<class Type>
+Type CTECList<Type> :: removeFormIndex(int index)
+		{
+	Type returnValue;
+		}
+template<class Type>
+Type CTECLIST<Type> : removefromEnd()
+{
+	assert(size>0);
+	type returnValue;
+	if(size == 1)
+	{
+		ArrayNode<Type> * toRemove = end;
+		returnValue = removeFromFront;
+		end = nullptr;
+		head = nullptr;
+		delete toRemove;
+	}
+	else
+	{
+		Array<Type> * current = head;
+		for(int index = 0;  index < size - 1; index++)
+		{
+			current = current->getNext();
+		}
+	returnValue = end-> getValue();
+	delete end;
+	current = end;
+	current->setNext(nulptr);
+	}
+}
 
